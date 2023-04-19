@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "67d2e340-5771-4e93-845b-41a886b8daf7",
+		"name": "ReactGram",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register an user and sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cafe\",\n    \"email\": \"cafe@teste.com\",\n    \"password\": \"teste123\",\n    \"confirmpassword\": \"teste123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign user in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"cafe@teste.com\",\n    \"password\": \"teste123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/profile",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Cafee",
+									"type": "default"
+								},
+								{
+									"key": "bio",
+									"value": "teste bio",
+									"type": "default"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/home/wagner/Pictures/3x4.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User  by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/644039a92aa2e53eadfc04eb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"644039a92aa2e53eadfc04eb"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDAzOWE5MmFhMmU1M2VhZGZjMDRlYiIsImlhdCI6MTY4MTkzMDY2NSwiZXhwIjoxNjgyNTM1NDY1fQ.rUiaZNAsFIxvU7MK0FNXHYLkmZzH7gziyt1cMpfN5uo",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Insert a photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Foto deadpool",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/wagner/Pictures/deadpool.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/photos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/photos/643d8108fdefa9df18c76314",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"643d8108fdefa9df18c76314"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/photos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/photos/user/644039a92aa2e53eadfc04eb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"user",
+								"644039a92aa2e53eadfc04eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get photo by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/photos/64403a572aa2e53eadfc0508",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"64403a572aa2e53eadfc0508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a photo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Teste Deadpool\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/photos/64403a572aa2e53eadfc0508",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"64403a572aa2e53eadfc0508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like a photo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/photos/like/64403a572aa2e53eadfc0508",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"like",
+								"64403a572aa2e53eadfc0508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment a photo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\": \"Outra coisa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/photos/comment/64403a572aa2e53eadfc0508",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"comment",
+								"64403a572aa2e53eadfc0508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search  photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/photos/search?q=deadpool",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "deadpool"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDAzOWE5MmFhMmU1M2VhZGZjMDRlYiIsImlhdCI6MTY4MTkzMDY2NSwiZXhwIjoxNjgyNTM1NDY1fQ.rUiaZNAsFIxvU7MK0FNXHYLkmZzH7gziyt1cMpfN5uo",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Teste Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NDAzOWE5MmFhMmU1M2VhZGZjMDRlYiIsImlhdCI6MTY4MTkzMDY2NSwiZXhwIjoxNjgyNTM1NDY1fQ.rUiaZNAsFIxvU7MK0FNXHYLkmZzH7gziyt1cMpfN5uo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:5000",
+			"type": "default"
+		}
+	]
+}
