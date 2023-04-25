@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Cafe\",\n    \"email\": \"cafe@teste.com\",\n    \"password\": \"teste123\",\n    \"confirmpassword\": \"teste123\"\n}",
+							"raw": "{\n    \"name\": \"Cafe\",\n    \"email\": \"cafe@teste.com\",\n    \"password\": \"teste123\",\n    \"confirmPassword\": \"teste123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
