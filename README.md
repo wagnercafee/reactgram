@@ -1,4 +1,5 @@
 # Installation
+- Versão do **node** v18.10.0.
 - Clonar o projeto para máquina.
 ## **Backend:** 
 ```sh
